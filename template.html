@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Накладная</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .contractor {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .total {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Накладная</h1>
+    <div class="contractor">
+        Поставщик: {{contractor}}
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Товар</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Сумма</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{index}}</td>
+                <td>{{product}}</td>
+                <td>{{price}}</td>
+                <td>{{qty}}</td>
+                <td>{{total}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
